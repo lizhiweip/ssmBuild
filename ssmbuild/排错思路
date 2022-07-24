@@ -1,0 +1,9 @@
+1.问题：bean不存在
+
+步骤：
+   1.查看bean注入是否成功
+   2.Junit单元测试。看代码是否能够查询出来结果！
+   3.可以确定是spring出了问题！
+   4，SpringMvc整合的时候没调用到我们的service层的bean
+      1.applicationContext里面没有注册bean
+      2.web.xml中我们也绑定了配置文件,发现问题，我们配置的是Spring-mvc.xml,确实没有service.xml的bean
