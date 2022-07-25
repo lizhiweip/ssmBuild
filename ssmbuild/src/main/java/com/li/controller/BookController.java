@@ -26,4 +26,32 @@ public class BookController {
         return "allBook";
     }
 
+    //跳转到增加书籍页面
+    @RequestMapping("/toAddBook")
+    public String toAddPaper(){
+        return "addBook";
+    }
+    //添加书籍请求
+    @RequestMapping("/addBook")
+    public String addBook(Books books){
+        System.out.println("addBook=>"+books);
+        bookService.addBook(books);
+        return "redirect:/book/allBook"; //重定向到@RequestMapping("/allBook")；
+    }
+
+    //跳转到修改页面
+    @RequestMapping("/toUpdate")
+    public String toUpdatePaper(int id,Model model){
+        Books books = bookService.queryBookById(id);
+        model.addAttribute("QBooks",books);
+        return "updateBook";
+    }
+    //修改书籍
+    @RequestMapping("/updateBook")
+    public String updateBook(Books books){
+        System.out.println("updateBook==>"+books);
+        bookService.updateBook(books);
+        return "redirect:/book/allBook";
+    }
+
 }
