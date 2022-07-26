@@ -53,8 +53,8 @@
                              <td>${book.detail}</td>
                              <td>
                                  <a href="${pageContext.request.contextPath}/book/toUpdate?id=${book.bookID}">修改</a>
-                                 &nbsp; | &nbsp;
-                                 <a href="#">删除</a>
+                                    &nbsp; | &nbsp;
+                                 <a href="${pageContext.request.contextPath}/book/deleteBook?id=${book.bookID}">删除</a>
                              </td>
                          </tr>
                      </c:forEach>

@@ -30,6 +30,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.20" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.20" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.20" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.9.1" />
         </element>
       </element>
     </root>
